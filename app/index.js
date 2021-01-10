@@ -130,6 +130,9 @@ fetch(URL + "/furniture")
   const lis = []
   for (item of furniture){ lis.push(createLi(item)) }
   orderLis(lis)
-}) 
+})
+.catch(function(error) {
+  console.log(error.message)
+})
 
 editForm.addEventListener("submit", editItem)
